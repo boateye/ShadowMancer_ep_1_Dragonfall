@@ -54,11 +54,6 @@ nodes {
   }
   branches {
     responseText: "I don\'t need those. Like maybe I wanna shoot somebody, understand?"
-    conditions {
-      ops {
-        functionName: "No Condition"
-      }
-    }
     nextNodeIndex: 5
   }
   nodeType: ConversationNodeType_Simple
@@ -402,9 +397,9 @@ nodes {
             functionName: "Specific Actor"
             args {
               call_value {
-                functionName: "Get Map Item (Actor)"
+                functionName: "Get Map Item (Player)"
                 args {
-                  string_value: "545a7253656362c804007605"
+                  int_value: 0
                 }
               }
             }
@@ -486,9 +481,9 @@ nodes {
             functionName: "Specific Actor"
             args {
               call_value {
-                functionName: "Get Map Item (Actor)"
+                functionName: "Get Map Item (Player)"
                 args {
-                  string_value: "545a7253656362c804007605"
+                  int_value: 0
                 }
               }
             }

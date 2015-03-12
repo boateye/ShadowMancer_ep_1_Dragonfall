@@ -21,13 +21,16 @@ character_mod {
     authority: 0
     protect_tether_range: 0
     move_speed: 0
+    vision_peripheral_distance: 0
+    vision_cone_distance: 0
+    vision_cone_angle: 0
   }
   skills {
     ranged_combat: 0
     close_combat: 0
     throwing_weapons: 0
     spellcasting: 0
-    decking: 5
+    decking: 0
     conjuring: 0
     spirit_summoning: 0
     drone_control: 0
@@ -36,12 +39,8 @@ character_mod {
     etiquette_corporate: 0
     etiquette_security: 0
     etiquette_gang: 0
-    etiquette_paranormal: 0
     etiquette_socialite: 0
-    etiquette_infected: 0
     chi_casting: 0
-    drain_resistance: 0
-    drone_combat: 0
     etiquette_shadowrunner: 0
     etiquette_street: 0
     etiquette_academic: 0
@@ -53,12 +52,10 @@ character_mod {
     smg: 0
     edged: 0
     unarmed: 0
-    throwing_blades: 0
     spirit_control: 0
     esp_control: 0
     drone_combat: 0
   }
-  archetypeName: "Guard - Protect"
   attitude: AttitudeAggressive
   vulnerabilities {
   }
@@ -67,22 +64,20 @@ equipment {
   prefab_name: "Player_DeckerStreet"
 }
 equipment {
+  prefab_name: "Berlin_CyberdeckExcalibur"
+}
+equipment {
   prefab_name: "CyberdeckExcalibur"
 }
-team_id: "Shadowrunner"
+team_id: "Shadowrunners"
 char_name: "Case"
 pc_spawn_number: -1
-unkillable: true
-spawn_type: SpawnType_Normal
 hiring_type: HiringType_Forced
-disable_pickups: false
-cyberware_jack: "Datajack"
 portrait {
   filename: "pc_humanmale_06a_shavedhead"
 }
-description_bio: "The main protagonist."
+description_bio: "The main protagonist"
 portrait_code_override: "s1hoc11b8c11t0"
-karma: 163
+karma: 123
 hiring_cost_override: 1000
 hiring_tag: "Case, the main protagonist of Neuromancer"
-scale_character_sheet: true

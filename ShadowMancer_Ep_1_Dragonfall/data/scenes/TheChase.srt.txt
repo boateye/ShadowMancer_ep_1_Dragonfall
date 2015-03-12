@@ -520,7 +520,7 @@ characters {
     team_id: "LoneStar"
     char_name: "Molly"
     pc_spawn_number: -1
-    uninjurable: false
+    uninjurable: true
     unkillable: true
     hiring_type: HiringType_Forced
     portrait {

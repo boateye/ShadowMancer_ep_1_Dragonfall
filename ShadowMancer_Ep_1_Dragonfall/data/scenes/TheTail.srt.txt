@@ -17,6 +17,9 @@ triggers {
   }
   actions {
     ops {
+      functionName: "End Current Team Round"
+    }
+    ops {
       functionName: "Enable/Disable Interactable Object"
       args {
         call_value {
@@ -45,6 +48,17 @@ triggers {
           functionName: "Get Map Item (Actor Reference)"
           args {
             string_value: "541a01b365333928100000e6"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
           }
         }
       }
@@ -137,75 +151,6 @@ triggers {
         }
       }
     }
-    ops {
-      functionName: "End Current Team Round"
-    }
-    ops {
-      functionName: "Set Goal Status"
-      args {
-        call_value {
-          functionName: "Get Map Item (Goal)"
-          args {
-            string_value: "Figure out who\'s tailing you"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "GoalStatus"
-          }
-          args {
-            int_value: 2
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "WithOrWithout"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Set Goal Status"
-      args {
-        call_value {
-          functionName: "Get Map Item (Goal)"
-          args {
-            string_value: "Lose your tail!"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "GoalStatus"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "WithOrWithout"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-    }
   }
   isActive: true
   idRef {
@@ -233,6 +178,39 @@ triggers {
   conditions {
   }
   actions {
+    ops {
+      functionName: "Interrupt Team\'s Movement"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
     ops {
       functionName: "Clear Actor Orders"
       args {
@@ -370,6 +348,22 @@ triggers {
           }
         }
       }
+      args {
+        call_value {
+          functionName: "Nothing Selected"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
     }
   }
   isActive: true
@@ -432,13 +426,133 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "trgr_UpdateQuests"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "541a01f665333928100000e7"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "541a01b365333928100000e6"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Figure out who\'s tailing you"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Lose your tail!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "55014d3765636278190069ca"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "rgn_TailEnter"
   position {
-    x: -21
-    y: -57
-    width: 0
-    height: 0
+    x: -24
+    y: -64
+    width: -1
+    height: 1
   }
   enabledAtStart: true
   is_camera_region: false
@@ -452,6 +566,7 @@ regions {
     a: 1
   }
   visible_at_start: false
+  is_closet: false
   is_teleporter_region: false
   directional_light_dir {
     x: -0.5
@@ -475,6 +590,7 @@ regions {
   default_music: ""
   loop_combat_music: true
   loop_default_music: false
+  no_fow_in_region: false
 }
 regions {
   name: "rgn_ShopWindow"
@@ -496,6 +612,7 @@ regions {
     a: 1
   }
   visible_at_start: false
+  is_closet: false
   is_teleporter_region: false
   directional_light_dir {
     x: -0.5
@@ -519,6 +636,7 @@ regions {
   default_music: ""
   loop_combat_music: true
   loop_default_music: false
+  no_fow_in_region: false
 }
 regions {
   name: "rgn_TailExit"
@@ -540,6 +658,7 @@ regions {
     a: 1
   }
   visible_at_start: false
+  is_closet: false
   is_teleporter_region: false
   directional_light_dir {
     x: -0.5
@@ -563,6 +682,7 @@ regions {
   default_music: ""
   loop_combat_music: true
   loop_default_music: false
+  no_fow_in_region: false
 }
 regions {
   name: "Camera"
@@ -584,6 +704,7 @@ regions {
     a: 1
   }
   visible_at_start: false
+  is_closet: false
   is_teleporter_region: false
   directional_light_dir {
     x: -0.5
@@ -607,6 +728,7 @@ regions {
   default_music: "Seattle-Set6-Ominous"
   loop_combat_music: true
   loop_default_music: true
+  no_fow_in_region: false
 }
 characters {
   name: "chars_icon_playerIcon"
@@ -1267,7 +1389,7 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -33
+    x: -32
     y: 0
     z: -50
   }
@@ -1333,7 +1455,7 @@ characters {
         esp_control: 0
         drone_combat: 0
       }
-      archetypeName: "Guard - Protect"
+      archetypeName: "Non-Combatant"
       attitude: AttitudeAggressive
       vulnerabilities {
       }
@@ -2354,6 +2476,8 @@ team_affiliations {
 scene_dimensions {
   dimension_name: "Default"
 }
+character_roster {
+}
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
   prereq_description: ""
@@ -2369,5 +2493,8 @@ use_hiring_cost_warning: true
 hiring_average_cost: 99999
 override_hiring_average_cost: true
 show_equip_screen_on_scene_load: false
+is_persistant: false
+is_persistant_has_value: false
 can_move_outside_camera_regions: true
 can_start_before_triggers: true
+can_use_team_advancement: false
