@@ -2426,7 +2426,7 @@ parentStory: ""
 scene_title: "The Tail"
 scene_subtitle: ""
 scene_synopsis: "Just as you step out of The Chat, you\'re hit with a sudden cellular awareness that someone is on your ass, and very close. "
-scene_image: ""
+scene_image: "loadingimage_haven"
 scene_continue_button_skip: false
 scene_restore_runner_health: false
 directional_light_dir {
@@ -2475,8 +2475,6 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
-}
-character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

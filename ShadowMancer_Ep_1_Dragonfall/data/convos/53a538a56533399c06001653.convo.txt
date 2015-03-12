@@ -20,7 +20,7 @@ nodes {
     id: "53aa808b6533395c1d006dff"
   }
   index: 1
-  text: "{{GM}}Something seemed a bit off about your memory of \"Screaming Fist.\" However, you can\'t quite put a finger on it. Armitage interrupts your attempts to fill in your memory holes.{{/GM}}\n\n\"I was there, Case; I was there when they invented your kind.\"\n\n{{GM}}You start to shiver.{{/GM}}"
+  text: "{{GM}}Something seemed a bit off about your memory of \'Screaming Fist.\' However, you can\'t quite put a finger on it. Armitage interrupts your attempts to fill in your memory holes.{{/GM}}\n\nI was there, Case; I was there when they invented your kind.\n\n{{GM}}You start to shiver.{{/GM}}"
   branches {
     responseText: "You\'ve got zip to do with me and my kind, buddy. "
     nextNodeIndex: 2

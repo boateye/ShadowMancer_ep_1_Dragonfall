@@ -1,0 +1,7 @@
+unique_id: "Case_Default_Equipment"
+equipment {
+  prefab_name: "DeckerStreet"
+}
+equipment {
+  prefab_name: "CyberdeckExcalibur"
+}

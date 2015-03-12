@@ -261,7 +261,7 @@ parentStory: ""
 scene_title: "The Tail"
 scene_subtitle: ""
 scene_synopsis: "You\'re being followed, and you need something to protect yourself. Thankfully, the shop you ducked into sells illegal weapons. Even better, you brought your Mitsubishi Bank chip that gives your name as Charles Derek May. "
-scene_image: ""
+scene_image: "loadingimage_haven"
 scene_continue_button_skip: false
 scene_restore_runner_health: false
 directional_light_dir {
@@ -310,8 +310,6 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
-}
-character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

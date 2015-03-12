@@ -1656,7 +1656,7 @@ parentStory: ""
 scene_title: "The Chat"
 scene_subtitle: ""
 scene_synopsis: "The Sky above the port was the color of television, tuned to a dead channel. \n\nThe Chatsubo was a bar for professional expatriates; you could drink there for a week, and never hear two words in Japanese.  You\'re here to speak english with Ratz, the owner of this fine establishment of a dive bar. The warm familiarity of the chat welcomes you as you stride in off  of the the cold port."
-scene_image: ""
+scene_image: "loadingimage_haven"
 scene_continue_button_skip: false
 scene_restore_runner_health: false
 directional_light_dir {
@@ -1705,8 +1705,6 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
-}
-character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

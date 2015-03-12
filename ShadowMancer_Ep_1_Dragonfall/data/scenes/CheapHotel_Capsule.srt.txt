@@ -352,6 +352,7 @@ regions {
     a: 1
   }
   visible_at_start: false
+  is_closet: false
   is_teleporter_region: false
   directional_light_dir {
     x: -0.5
@@ -375,6 +376,7 @@ regions {
   default_music: ""
   loop_combat_music: true
   loop_default_music: false
+  no_fow_in_region: false
 }
 regions {
   name: "Camera_Lobby"
@@ -396,6 +398,7 @@ regions {
     a: 1
   }
   visible_at_start: false
+  is_closet: false
   is_teleporter_region: false
   directional_light_dir {
     x: -0.5
@@ -419,6 +422,7 @@ regions {
   default_music: "Seattle-Set5-Legwork"
   loop_combat_music: true
   loop_default_music: true
+  no_fow_in_region: false
 }
 regions {
   name: "Enter_Capsule"
@@ -440,6 +444,7 @@ regions {
     a: 1
   }
   visible_at_start: false
+  is_closet: false
   is_teleporter_region: false
   directional_light_dir {
     x: -0.5
@@ -463,6 +468,7 @@ regions {
   default_music: ""
   loop_combat_music: true
   loop_default_music: false
+  no_fow_in_region: false
 }
 characters {
   name: "chars_icon_playerIcon"
@@ -743,7 +749,7 @@ parentStory: ""
 scene_title: "CHEAP HOTEL"
 scene_subtitle: ""
 scene_synopsis: "If the place had any other name, you didn\'t know. It was always referred to as CHEAP HOTEL as the unlit neon sign near the main entrance suggested amidst a clusterfuck of ideograms. You had rented a coffin here, on a weekly basis, since you\'d arrived in Chiba, but you never slept in CHEAP HOTEL. You\'ve slept in cheaper places. "
-scene_image: ""
+scene_image: "loadingimage_haven"
 scene_continue_button_skip: false
 scene_restore_runner_health: false
 directional_light_dir {
@@ -793,8 +799,6 @@ team_affiliations {
 scene_dimensions {
   dimension_name: "Default"
 }
-character_roster {
-}
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
   prereq_description: ""
@@ -810,5 +814,8 @@ use_hiring_cost_warning: true
 hiring_average_cost: 99999
 override_hiring_average_cost: true
 show_equip_screen_on_scene_load: false
+is_persistant: false
+is_persistant_has_value: false
 can_move_outside_camera_regions: true
 can_start_before_triggers: true
+can_use_team_advancement: false

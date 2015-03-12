@@ -94,7 +94,7 @@ nodes {
     id: "539a57a06533393c03008186"
   }
   index: 6
-  text: "Then again, you\'re probably too young to remember the war.\n\nLeningrad, Kiev, Siberia. We invented you in Siberia, $(l.name). The \"Screaming Fist\"."
+  text: "Then again, you\'re probably too young to remember the war.\n\nLeningrad, Kiev, Siberia. We invented you in Siberia, $(l.name). The \'Screaming Fist\'."
   branches {
     responseText: "The fuck\'s a \"Screaming Fist\"?"
     nextNodeIndex: 7

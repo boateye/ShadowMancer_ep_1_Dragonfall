@@ -30,7 +30,7 @@ character_mod {
     close_combat: 0
     throwing_weapons: 0
     spellcasting: 0
-    decking: 0
+    decking: 2
     conjuring: 0
     spirit_summoning: 0
     drone_control: 0
@@ -56,15 +56,13 @@ character_mod {
     esp_control: 0
     drone_combat: 0
   }
+  archetypeName: "Player"
   attitude: AttitudeAggressive
   vulnerabilities {
   }
 }
 equipment {
-  prefab_name: "Player_DeckerStreet"
-}
-equipment {
-  prefab_name: "Berlin_CyberdeckExcalibur"
+  prefab_name: "DeckerStreet"
 }
 equipment {
   prefab_name: "CyberdeckExcalibur"
@@ -73,11 +71,12 @@ team_id: "Shadowrunners"
 char_name: "Case"
 pc_spawn_number: -1
 hiring_type: HiringType_Forced
+cyberware_jack: "Datajack"
 portrait {
   filename: "pc_humanmale_06a_shavedhead"
 }
 description_bio: "The main protagonist"
 portrait_code_override: "s1hoc11b8c11t0"
-karma: 123
+karma: 136
 hiring_cost_override: 1000
 hiring_tag: "Case, the main protagonist of Neuromancer"

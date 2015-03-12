@@ -154,6 +154,7 @@ regions {
     a: 1
   }
   visible_at_start: false
+  is_closet: false
   is_teleporter_region: false
   directional_light_dir {
     x: -0.5
@@ -177,6 +178,7 @@ regions {
   default_music: "Seattle-Set6-Ominous"
   loop_combat_music: true
   loop_default_music: true
+  no_fow_in_region: false
 }
 regions {
   name: "rgn_Warning"
@@ -198,6 +200,7 @@ regions {
     a: 1
   }
   visible_at_start: false
+  is_closet: false
   is_teleporter_region: false
   directional_light_dir {
     x: -0.5
@@ -221,6 +224,7 @@ regions {
   default_music: ""
   loop_combat_music: true
   loop_default_music: false
+  no_fow_in_region: false
 }
 characters {
   name: "system_spawner_playerSpawner"
@@ -1859,7 +1863,7 @@ parentStory: ""
 scene_title: "The Chase"
 scene_subtitle: ""
 scene_synopsis: "You leap out of the office window and your fall was cushioned by the pavement. You fell face forward, rolled over, and squeezed into the shadow of the alley. A head appeared in the cubicle\'s window. Backlit by the red of the alarm lights, she vanished as quickly as she appeared. \n\n\"Shit\" someone said. It sounded feminine. Someone with an accent of the northern Sprawl. \n\nYou make a long count to twenty, then stand up. It takes you a few seconds to remember where you are, but once you figure it out, you make your way toward your coffin at CHEAP HOTEL."
-scene_image: ""
+scene_image: "loadingimage_haven"
 scene_continue_button_skip: false
 scene_restore_runner_health: false
 directional_light_dir {
@@ -1909,8 +1913,6 @@ team_affiliations {
 scene_dimensions {
   dimension_name: "Default"
 }
-character_roster {
-}
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
   prereq_description: ""
@@ -1926,5 +1928,8 @@ use_hiring_cost_warning: true
 hiring_average_cost: 99999
 override_hiring_average_cost: true
 show_equip_screen_on_scene_load: false
+is_persistant: false
+is_persistant_has_value: false
 can_move_outside_camera_regions: true
 can_start_before_triggers: true
+can_use_team_advancement: false

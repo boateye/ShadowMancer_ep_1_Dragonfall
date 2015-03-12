@@ -302,7 +302,7 @@ parentStory: ""
 scene_title: "Armitage\'s Apartment"
 scene_subtitle: ""
 scene_synopsis: ""
-scene_image: ""
+scene_image: "loadingimage_haven"
 scene_continue_button_skip: false
 scene_restore_runner_health: false
 directional_light_dir {
@@ -356,8 +356,6 @@ scene_dimensions {
   dimension_name: "Matrix"
   initial_alarm_state: 0
   turns_per_round: 3
-}
-character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

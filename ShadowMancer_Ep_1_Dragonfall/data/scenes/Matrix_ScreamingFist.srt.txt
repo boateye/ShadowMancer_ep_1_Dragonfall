@@ -4400,11 +4400,11 @@ characters {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -106
+    x: 52
     y: 0
-    z: -19
+    z: -5
   }
-  orientation: ORIENTATION_W
+  orientation: ORIENTATION_N
   idRef {
     id: "5486a11f3261622427006994"
   }
@@ -6469,7 +6469,7 @@ parentStory: ""
 scene_title: "The Screaming Fist"
 scene_subtitle: ""
 scene_synopsis: ""
-scene_image: ""
+scene_image: "loadingimage_haven"
 scene_continue_button_skip: true
 scene_restore_runner_health: false
 directional_light_dir {

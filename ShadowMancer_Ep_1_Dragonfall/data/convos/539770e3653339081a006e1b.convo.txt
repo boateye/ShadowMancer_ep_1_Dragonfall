@@ -60,7 +60,7 @@ nodes {
     id: "539a535e6533393c0300803b"
   }
   index: 3
-  text: "\"I\'m collecting you for the man I work for. Don\'t worry, he just wants to talk. He doesn\'t want to hurt you."
+  text: "I\'m collecting you for the man I work for. Don\'t worry, he just wants to talk. He doesn\'t want to hurt you."
   branches {
     responseText: ""
     nextNodeIndex: 4
