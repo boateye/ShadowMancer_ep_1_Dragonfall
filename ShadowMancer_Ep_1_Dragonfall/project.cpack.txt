@@ -2,9 +2,11 @@ project_id: "54fe753e656362d410004db8"
 project_name: "ShadowMancer_Ep_1_Dragonfall"
 project_version: "1"
 author_name: "boateye"
-synopsis: "Neuromancer in Dragonfall: DC"
+synopsis: "Project: Shadowmancer Ep.1 - The Screaming Fist v1"
 has_story: true
+read_only: false
 preview_image: "preview"
+game_version_required: 1.2
 content_pack_dependencies {
   package_id: "518d7671643431b03f0041a8"
   package_version: "1"
