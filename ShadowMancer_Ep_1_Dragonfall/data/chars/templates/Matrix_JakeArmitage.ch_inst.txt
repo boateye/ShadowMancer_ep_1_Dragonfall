@@ -1,6 +1,5 @@
 prefab_name: "Seattle:Story/JakeArmitage"
 character_sheet_id: "Story_Jake"
-equipment_sheet_id: "Story_Jake"
 character_mod {
   stats {
     body: 0
@@ -28,7 +27,7 @@ character_mod {
     close_combat: 0
     throwing_weapons: 0
     spellcasting: 0
-    decking: 0
+    decking: 10
     conjuring: 0
     spirit_summoning: 0
     drone_control: 0
@@ -59,6 +58,9 @@ character_mod {
   vulnerabilities {
   }
 }
+equipment {
+  prefab_name: "CyberdeckExcalibur"
+}
 team_id: "Shadowrunner"
 char_name: "Jake Armitage"
 pc_spawn_number: -1
@@ -69,6 +71,6 @@ portrait {
   filename: "NPC_HumanMale_JakeArmitage"
 }
 description_bio: "Bad memory, poor sleep habits. Knows the game like no one else."
-karma: 97
+karma: 152
 hiring_cost_override: 1200
 hiring_tag: "Jake Armitage during Screaming Fist"
