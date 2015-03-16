@@ -3719,7 +3719,7 @@ regions {
 regions {
   name: "rgn_Portal2"
   position {
-    x: -54
+    x: -65
     y: 15
     width: 2
     height: 2
@@ -3765,10 +3765,10 @@ regions {
 regions {
   name: "cam_Matrix"
   position {
-    x: -112
-    y: -1
-    width: 60
-    height: 32
+    x: -114
+    y: 0
+    width: 51
+    height: 30
   }
   enabledAtStart: true
   is_camera_region: true
@@ -3857,7 +3857,7 @@ regions {
 regions {
   name: "rgn_FourthWave"
   position {
-    x: -101
+    x: -100
     y: 2
     width: 2
     height: 28
@@ -3995,10 +3995,10 @@ regions {
 regions {
   name: "cam_Matrix"
   position {
-    x: -111
-    y: -39
+    x: -112
+    y: -40
     width: 61
-    height: 31
+    height: 34
   }
   enabledAtStart: true
   is_camera_region: true
@@ -4134,9 +4134,9 @@ regions {
   name: "cam_Matrix"
   position {
     x: -44
-    y: -1
-    width: 41
-    height: 33
+    y: 1
+    width: 40
+    height: 31
   }
   enabledAtStart: true
   is_camera_region: true
@@ -4759,7 +4759,7 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Matrix/MatrixICE_black_range"
+    prefab_name: "Seattle:Matrix/MatrixICE_black_range"
     character_sheet_id: "IC_Lv1_Black_Ranged"
     equipment_sheet_id: "IC Black Ranged Lv1 Gear"
     character_mod {
@@ -4776,7 +4776,7 @@ characters {
       }
       specializations {
       }
-      archetypeName: "Guard - Protect"
+      archetypeName: "Player"
       attitude: AttitudeAggressive
       vulnerabilities {
       }
@@ -4788,95 +4788,10 @@ characters {
     pc_spawn_number: -1
     spawn_type: SpawnType_Matrix
     portrait {
-      filename: ""
+      filename: "generic_esp_attacker"
     }
     dimension_name: "Matrix"
-  }
-}
-characters {
-  name: "chars_icon_playerIcon"
-  gridPoint {
-    x: -10
-    y: 0
-    z: 16
-  }
-  orientation: ORIENTATION_N
-  GeneralTags: "Mole"
-  idRef {
-    id: "53a3d54c653339581f000f49"
-  }
-  lod: 0
-  character_instance {
-    prefab_name: "Matrix/MatrixICE_black_range"
-    character_sheet_id: "IC_Lv1_Black_Ranged"
-    equipment_sheet_id: "IC Black Ranged Lv1 Gear"
-    character_mod {
-      stats {
-        morale: 24
-        discipline: 24
-        awareness: 24
-        protect_tether_range: 5
-      }
-      skills {
-      }
-      specializations {
-      }
-      archetypeName: "Guard - Protect"
-      attitude: AttitudeAggressive
-    }
-    team_id: "Shadowrunners"
-    char_name: "Mole 1.0"
-    GeneralTags: "Mole"
-    enabled_at_start: false
-    pc_spawn_number: -1
-    spawn_type: SpawnType_Matrix
-    portrait {
-      filename: ""
-    }
-    dimension_name: "Matrix"
-  }
-}
-characters {
-  name: "chars_icon_playerIcon"
-  gridPoint {
-    x: -10
-    y: 0
-    z: 13
-  }
-  orientation: ORIENTATION_N
-  GeneralTags: "Mole"
-  idRef {
-    id: "53a3d54d653339581f000f4a"
-  }
-  lod: 0
-  character_instance {
-    prefab_name: "Matrix/MatrixICE_black_range"
-    character_sheet_id: "IC_Lv1_Black_Ranged"
-    equipment_sheet_id: "IC Black Ranged Lv1 Gear"
-    character_mod {
-      stats {
-        morale: 24
-        discipline: 24
-        awareness: 24
-        protect_tether_range: 5
-      }
-      skills {
-      }
-      specializations {
-      }
-      archetypeName: "Guard - Protect"
-      attitude: AttitudeAggressive
-    }
-    team_id: "Shadowrunners"
-    char_name: "Mole 1.0"
-    GeneralTags: "Mole"
-    enabled_at_start: false
-    pc_spawn_number: -1
-    spawn_type: SpawnType_Matrix
-    portrait {
-      filename: ""
-    }
-    dimension_name: "Matrix"
+    karma: 33
   }
 }
 characters {
@@ -4894,7 +4809,8 @@ characters {
   lod: 0
   character_instance {
     prefab_name: "Seattle:Story/JakeArmitage"
-    character_sheet_id: "IC_Lv1_Black_Ranged"
+    character_sheet_id: "IC_Lv5_Black_Ranged"
+    equipment_sheet_id: "NPC Decker Lv5 Gear"
     character_mod {
       stats {
         body: 0
@@ -4916,13 +4832,16 @@ characters {
         authority: 0
         protect_tether_range: 0
         move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
       }
       skills {
         ranged_combat: 0
         close_combat: 0
         throwing_weapons: 0
         spellcasting: 0
-        decking: 8
+        decking: 5
         conjuring: 0
         spirit_summoning: 0
         drone_control: 0
@@ -4953,19 +4872,17 @@ characters {
         esp_control: 0
         drone_combat: 0
       }
-      archetypeName: "Guard - Protect"
+      archetypeName: "Player"
       attitude: AttitudeAggressive
       vulnerabilities {
       }
-    }
-    equipment {
-      prefab_name: "CyberdeckExcalibur"
     }
     team_id: "Shadowrunners"
     char_name: "Jake Armitage"
     GeneralTags: "Mole"
     enabled_at_start: false
     pc_spawn_number: -1
+    unkillable: true
     spawn_type: SpawnType_Matrix
     hiring_type: HiringType_Forced
     disable_pickups: true
@@ -4974,7 +4891,7 @@ characters {
     }
     description_bio: "Bad memory, poor sleep habits. Knows the game like no one else."
     dimension_name: "Matrix"
-    karma: 85
+    karma: 82
     hiring_cost_override: 1200
     hiring_tag: "Jake Armitage during Screaming Fist"
   }
@@ -5005,35 +4922,6 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -9
-    y: 0
-    z: 26
-  }
-  orientation: ORIENTATION_W
-  GeneralTags: "Reinforcement"
-  idRef {
-    id: "5488f1df6563626c1d000c46"
-  }
-  lod: 0
-  character_instance {
-    prefab_name: "Matrix/MatrixICE_white_melee"
-    character_sheet_id: "IC_Lv1_White_Ranged"
-    equipment_sheet_id: "IC White Melee Lv1 Gear"
-    team_id: "LoneStar"
-    char_name: "White IC"
-    GeneralTags: "Reinforcement"
-    enabled_at_start: false
-    pc_spawn_number: -1
-    spawn_type: SpawnType_Matrix
-    portrait {
-      filename: ""
-    }
-    dimension_name: "Matrix"
-  }
-}
-characters {
-  name: "chars_icon_playerIcon"
-  gridPoint {
     x: -20
     y: 0
     z: 26
@@ -5045,19 +4933,82 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Matrix/MatrixICE_white_melee"
-    character_sheet_id: "IC_Lv1_White_Ranged"
-    equipment_sheet_id: "IC White Melee Lv1 Gear"
+    prefab_name: "Seattle:Matrix/SpiritESPAttacker"
+    character_sheet_id: "ESP Attacker"
+    equipment_sheet_id: "ESP Attacker F6 Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Hunt And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
     team_id: "LoneStar"
     char_name: "White IC"
     GeneralTags: "Reinforcement"
     enabled_at_start: false
     pc_spawn_number: -1
+    unkillable: true
     spawn_type: SpawnType_Matrix
     portrait {
-      filename: ""
+      filename: "Generic_ESP_Attacker"
     }
     dimension_name: "Matrix"
+    karma: 321
   }
 }
 characters {
@@ -5074,19 +5025,82 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Matrix/MatrixICE_white_melee"
-    character_sheet_id: "IC_Lv1_White_Ranged"
-    equipment_sheet_id: "IC White Melee Lv1 Gear"
+    prefab_name: "Seattle:Matrix/SpiritESPKamikaze"
+    character_sheet_id: "ESP Kamikaze"
+    equipment_sheet_id: "ESP Kamikaze F6 Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Hunt And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
     team_id: "LoneStar"
     char_name: "White IC"
     GeneralTags: "Reinforcement"
     enabled_at_start: false
     pc_spawn_number: -1
+    unkillable: true
     spawn_type: SpawnType_Matrix
     portrait {
-      filename: ""
+      filename: "Generic_ESP_kamikaze"
     }
     dimension_name: "Matrix"
+    karma: 188
   }
 }
 characters {
@@ -5103,19 +5117,82 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Matrix/MatrixICE_white_melee"
-    character_sheet_id: "IC_Lv1_White_Ranged"
-    equipment_sheet_id: "IC White Melee Lv1 Gear"
+    prefab_name: "Seattle:Matrix/SpiritESPAttacker"
+    character_sheet_id: "ESP Attacker"
+    equipment_sheet_id: "ESP Attacker F6 Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Hunt And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
     team_id: "LoneStar"
     char_name: "White IC"
     GeneralTags: "Reinforcement"
     enabled_at_start: false
     pc_spawn_number: -1
+    uninjurable: true
     spawn_type: SpawnType_Matrix
     portrait {
-      filename: ""
+      filename: "Generic_ESP_Attacker"
     }
     dimension_name: "Matrix"
+    karma: 321
   }
 }
 characters {
@@ -5132,25 +5209,88 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Matrix/MatrixICE_white_melee"
-    character_sheet_id: "IC_Lv1_White_Ranged"
-    equipment_sheet_id: "IC White Melee Lv1 Gear"
+    prefab_name: "Seattle:Matrix/SpiritESPShield"
+    character_sheet_id: "ESP Shield"
+    equipment_sheet_id: "ESP Shield F6 Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Hunt And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
     team_id: "LoneStar"
     char_name: "White IC"
     GeneralTags: "Reinforcement"
     enabled_at_start: false
     pc_spawn_number: -1
+    unkillable: true
     spawn_type: SpawnType_Matrix
     portrait {
-      filename: ""
+      filename: "Generic_ESP_Shield"
     }
     dimension_name: "Matrix"
+    karma: 302
   }
 }
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -30
+    x: -33
     y: 0
     z: 17
   }
@@ -5183,7 +5323,7 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -30
+    x: -33
     y: 0
     z: 16
   }
@@ -5216,7 +5356,7 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -75
+    x: -77
     y: 0
     z: 15
   }
@@ -5249,7 +5389,7 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -78
+    x: -80
     y: 0
     z: 16
   }
@@ -5282,7 +5422,7 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -81
+    x: -83
     y: 0
     z: 15
   }
@@ -6003,6 +6143,196 @@ characters {
       filename: ""
     }
     dimension_name: "Matrix"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 16
+  }
+  orientation: ORIENTATION_N
+  GeneralTags: "Mole"
+  idRef {
+    id: "550719f6656362802100390f"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Matrix/MatrixICE_black_range"
+    character_sheet_id: "IC_Lv1_Black_Ranged"
+    equipment_sheet_id: "IC Black Ranged Lv1 Gear"
+    character_mod {
+      stats {
+        morale: 24
+        discipline: 24
+        awareness: 24
+        perception: 0
+        authority: 0
+        protect_tether_range: 5
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "Shadowrunners"
+    char_name: "Mole 1.0"
+    GeneralTags: "Mole"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: "generic_esp_attacker"
+    }
+    dimension_name: "Matrix"
+    karma: 33
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 12
+  }
+  orientation: ORIENTATION_N
+  GeneralTags: "Mole"
+  idRef {
+    id: "550719f76563628021003910"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Matrix/MatrixICE_black_range"
+    character_sheet_id: "IC_Lv1_Black_Ranged"
+    equipment_sheet_id: "IC Black Ranged Lv1 Gear"
+    character_mod {
+      stats {
+        morale: 24
+        discipline: 24
+        awareness: 24
+        perception: 0
+        authority: 0
+        protect_tether_range: 5
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "Shadowrunners"
+    char_name: "Mole 1.0"
+    GeneralTags: "Mole"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: "generic_esp_attacker"
+    }
+    dimension_name: "Matrix"
+    karma: 33
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -9
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_W
+  GeneralTags: "Reinforcement"
+  idRef {
+    id: "55071bca6563628021003911"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Matrix/SpiritESPKamikaze"
+    character_sheet_id: "ESP Kamikaze"
+    equipment_sheet_id: "ESP Kamikaze F6 Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Hunt And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "LoneStar"
+    char_name: "White IC"
+    GeneralTags: "Reinforcement"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    unkillable: true
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: "Generic_ESP_kamikaze"
+    }
+    dimension_name: "Matrix"
+    karma: 188
   }
 }
 variables {
