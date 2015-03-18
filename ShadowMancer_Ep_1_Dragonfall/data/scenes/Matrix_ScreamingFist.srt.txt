@@ -1612,18 +1612,43 @@ triggers {
     }
   }
   conditions {
+  }
+  actions {
     ops {
-      functionName: "Comparison (Actor)"
+      functionName: "Teleport Actor"
       args {
         call_value {
-          functionName: "Triggering Actor"
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53bee92c366262c017001309"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "54a6274e6563620023005f48"
+              }
+            }
+          }
         }
       }
       args {
         call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "IsOrIsNot"
+            string_value: "FacingDirection"
           }
           args {
             int_value: 1
@@ -1632,12 +1657,16 @@ triggers {
       }
       args {
         call_value {
-          functionName: "Active Actor"
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
         }
       }
     }
-  }
-  actions {
     ops {
       functionName: "Kill Actor"
       args {
@@ -1818,6 +1847,28 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "550639c1656362281a0014a7"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -1844,7 +1895,7 @@ triggers {
   }
   conditions {
     ops {
-      functionName: "Comparison (Actor)"
+      functionName: "Compare Actor Team"
       args {
         call_value {
           functionName: "Triggering Actor"
@@ -1863,7 +1914,21 @@ triggers {
       }
       args {
         call_value {
-          functionName: "Active Actor"
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Matrix"
+          }
         }
       }
     }
@@ -1950,7 +2015,7 @@ triggers {
   }
   conditions {
     ops {
-      functionName: "Comparison (Actor)"
+      functionName: "Compare Actor Team"
       args {
         call_value {
           functionName: "Triggering Actor"
@@ -1969,7 +2034,21 @@ triggers {
       }
       args {
         call_value {
-          functionName: "Active Actor"
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Matrix"
+          }
         }
       }
     }
@@ -2056,7 +2135,7 @@ triggers {
   }
   conditions {
     ops {
-      functionName: "Comparison (Actor)"
+      functionName: "Compare Actor Team"
       args {
         call_value {
           functionName: "Triggering Actor"
@@ -2075,7 +2154,21 @@ triggers {
       }
       args {
         call_value {
-          functionName: "Active Actor"
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Matrix"
+          }
         }
       }
     }
@@ -3627,12 +3720,12 @@ regions {
 regions {
   name: "rgn_TeleportCase"
   position {
-    x: -43
-    y: 16
-    width: 2
-    height: 2
+    x: -44
+    y: 15
+    width: 4
+    height: 4
   }
-  enabledAtStart: false
+  enabledAtStart: true
   is_camera_region: false
   idRef {
     id: "5480106a656362f820005a93"
@@ -3719,10 +3812,10 @@ regions {
 regions {
   name: "rgn_Portal2"
   position {
-    x: -65
-    y: 15
-    width: 2
-    height: 2
+    x: -66
+    y: 14
+    width: 3
+    height: 4
   }
   enabledAtStart: false
   is_camera_region: false
@@ -4750,7 +4843,7 @@ characters {
   gridPoint {
     x: -10
     y: 0
-    z: 20
+    z: 21
   }
   orientation: ORIENTATION_N
   GeneralTags: "Mole"
@@ -4799,7 +4892,7 @@ characters {
   gridPoint {
     x: -7
     y: 0
-    z: 18
+    z: 19
   }
   orientation: ORIENTATION_N
   GeneralTags: "Mole"
@@ -6341,6 +6434,14 @@ variables {
     scope: TsVariableScope_Scene
     name: "LockedExit"
     typeName: "bool"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "int_TeleportedActor"
+    typeName: "int"
   }
 }
 mapEvents: "Event_StartEscape"

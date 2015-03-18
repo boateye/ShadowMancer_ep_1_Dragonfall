@@ -2885,6 +2885,15 @@ props {
     string_value: "matrixDoorEnvironment90"
   }
   displayName: "Portal1"
+  idRef {
+    id: "5508ed6f656362401700363c"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Matrix
+    interaction_info_text: ""
+  }
   lod: 0
 }
 props {
