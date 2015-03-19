@@ -72,6 +72,7 @@ team_id: "Shadowrunners"
 char_name: "Case"
 pc_spawn_number: -1
 hiring_type: HiringType_Forced
+ready_priority: 0
 cyberware_jack: "Datajack"
 portrait {
   filename: "pc_humanmale_06a_shavedhead"

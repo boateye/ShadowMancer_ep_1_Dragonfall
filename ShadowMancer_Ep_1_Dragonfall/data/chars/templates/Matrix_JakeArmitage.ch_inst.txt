@@ -1,5 +1,6 @@
 prefab_name: "Seattle:Story/JakeArmitage"
-character_sheet_id: "Story_Jake"
+character_sheet_id: "IC_Lv5_Black_Ranged"
+equipment_sheet_id: "NPC Decker Lv5 Gear"
 character_mod {
   stats {
     body: 0
@@ -21,13 +22,16 @@ character_mod {
     authority: 0
     protect_tether_range: 0
     move_speed: 0
+    vision_peripheral_distance: 0
+    vision_cone_distance: 0
+    vision_cone_angle: 0
   }
   skills {
     ranged_combat: 0
     close_combat: 0
     throwing_weapons: 0
     spellcasting: 0
-    decking: 10
+    decking: 5
     conjuring: 0
     spirit_summoning: 0
     drone_control: 0
@@ -42,6 +46,9 @@ character_mod {
     chi_casting: 0
     drain_resistance: 0
     drone_combat: 0
+    etiquette_shadowrunner: 0
+    etiquette_street: 0
+    etiquette_academic: 0
   }
   specializations {
     pistol: 0
@@ -52,25 +59,28 @@ character_mod {
     unarmed: 0
     throwing_blades: 0
     spirit_control: 0
+    esp_control: 0
+    drone_combat: 0
   }
-  archetypeName: "Guard - Seek And Destroy"
+  archetypeName: "Player"
   attitude: AttitudeAggressive
   vulnerabilities {
   }
 }
-equipment {
-  prefab_name: "CyberdeckExcalibur"
-}
-team_id: "Shadowrunner"
+team_id: "Shadowrunners"
 char_name: "Jake Armitage"
+enabled_at_start: false
 pc_spawn_number: -1
+unkillable: true
 spawn_type: SpawnType_Matrix
 hiring_type: HiringType_Forced
 disable_pickups: true
+ready_priority: 2
 portrait {
   filename: "NPC_HumanMale_JakeArmitage"
 }
 description_bio: "Bad memory, poor sleep habits. Knows the game like no one else."
-karma: 152
-hiring_cost_override: 1200
+dimension_name: "Matrix"
+karma: 82
+hiring_cost_override: 10
 hiring_tag: "Jake Armitage during Screaming Fist"

@@ -17,29 +17,113 @@ triggers {
   }
   actions {
     ops {
-      functionName: "Play Sound"
+      functionName: "Teleport Actor near Point"
       args {
         call_value {
-          functionName: "Get Map Item (Sound)"
+          functionName: "Specific Actor"
           args {
-            string_value: "player"
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "550a3fcb656362100d001d9c"
+              }
+            }
           }
           args {
-            string_value: "FemaleDeath"
           }
         }
       }
       args {
-        float_value: 8
+        int_value: 0
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "539f531d653339e8030016b4"
+              }
+            }
+          }
+        }
       }
       args {
         call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "bool"
+            string_value: "FacingDirection"
           }
           args {
-            int_value: 1
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor near Point"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "539f531d653339e8030016b4"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
           }
         }
       }
@@ -56,10 +140,10 @@ triggers {
 regions {
   name: "rgn_MakeHostile"
   position {
-    x: -14
-    y: 1
-    width: 6
-    height: 1
+    x: -16
+    y: 9
+    width: 2
+    height: 2
   }
   enabledAtStart: true
   is_camera_region: false
@@ -73,6 +157,7 @@ regions {
     a: 1
   }
   visible_at_start: false
+  is_closet: false
   is_teleporter_region: false
   directional_light_dir {
     x: -0.5
@@ -96,50 +181,14 @@ regions {
   default_music: ""
   loop_combat_music: true
   loop_default_music: false
-}
-characters {
-  name: "chars_icon_playerIcon"
-  gridPoint {
-    x: -9
-    y: 0
-    z: -2
-  }
-  orientation: ORIENTATION_N
-  idRef {
-    id: "539f5230653339e8030016b1"
-  }
-  lod: 0
-  character_instance {
-    character_sheet_id: "CG Human Adept"
-    character_mod {
-      stats {
-        morale: 0
-        discipline: 0
-        awareness: 0
-        perception: 0
-        authority: 0
-        protect_tether_range: 0
-        move_speed: 0
-      }
-      skills {
-      }
-      specializations {
-      }
-      archetypeName: "Non-Combatant"
-      vulnerabilities {
-      }
-    }
-    team_id: "Civilians"
-    char_name: "Test Actor"
-    pc_spawn_number: -1
-  }
+  no_fow_in_region: false
 }
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -7
+    x: -6
     y: 0
-    z: -1
+    z: 0
   }
   orientation: ORIENTATION_S
   idRef {
@@ -159,19 +208,33 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -9.4
+    x: -7
     y: 0
-    z: 0
+    z: 1
   }
   orientation: ORIENTATION_N
   idRef {
-    id: "546b137a6563627418000bdc"
+    id: "550a3fcb656362100d001d9c"
   }
   lod: 0
   character_instance {
-    character_sheet_id: "CG Human Adept"
+    prefab_name: "Seattle:Story/JakeArmitage"
+    character_sheet_id: "IC_Lv5_Black_Ranged"
+    equipment_sheet_id: "NPC Decker Lv5 Gear"
     character_mod {
       stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
         morale: 0
         discipline: 0
         awareness: 0
@@ -179,18 +242,67 @@ characters {
         authority: 0
         protect_tether_range: 0
         move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
       }
       skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 5
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_paranormal: 0
+        etiquette_socialite: 0
+        etiquette_infected: 0
+        chi_casting: 0
+        drain_resistance: 0
+        drone_combat: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
       }
       specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        throwing_blades: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
       }
-      archetypeName: "Non-Combatant"
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
       vulnerabilities {
       }
     }
-    team_id: "Civilians"
-    char_name: "Test Actor2"
+    team_id: "Shadowrunners"
+    char_name: "Jake Armitage"
+    enabled_at_start: true
     pc_spawn_number: -1
+    unkillable: true
+    spawn_type: SpawnType_Matrix
+    hiring_type: HiringType_Forced
+    disable_pickups: true
+    portrait {
+      filename: "NPC_HumanMale_JakeArmitage"
+    }
+    description_bio: "Bad memory, poor sleep habits. Knows the game like no one else."
+    dimension_name: "Matrix"
+    karma: 82
+    hiring_cost_override: 10
+    hiring_tag: "Jake Armitage during Screaming Fist"
   }
 }
 worldMapLocation {
@@ -254,28 +366,39 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
+  turns_per_round: 3
 }
 scene_dimensions {
   dimension_name: "Matrix"
   initial_alarm_state: 35
-  turns_per_round: 3
+  turns_per_round: 1
 }
 character_roster {
+  roster_entries {
+    reference_id: "Matrix_JakeArmitage"
+    hiring_conditions {
+    }
+    hiring_cost: -1
+  }
 }
-show_hiring_screen_on_scene_load: false
+show_hiring_screen_on_scene_load: true
 scene_hiring_prerequisites {
   prereq_description: ""
   prereq_conditions {
   }
 }
-hiring_slot_count: 0
+hiring_slot_count: 1
 hiring_minimum_karma: 0
 hiring_maximum_karma: 0
+hire_from_content_pack: "54fe753e656362d410004db8"
 roster_overrides {
 }
 use_hiring_cost_warning: true
 hiring_average_cost: 99999
 override_hiring_average_cost: true
 show_equip_screen_on_scene_load: false
+is_persistant: false
+is_persistant_has_value: false
 can_move_outside_camera_regions: true
 can_start_before_triggers: true
+can_use_team_advancement: false

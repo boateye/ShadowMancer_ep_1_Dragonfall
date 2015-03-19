@@ -1333,6 +1333,7 @@ props {
       LANIdentifier: "54800daa656362f820005a8f"
       LANEquipment: ""
     }
+    interaction_info_text: ""
   }
   lod: 0
 }
@@ -1411,19 +1412,6 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "53dec08236626250170008a2"
-  }
-  lod: 0
-}
-props {
-  name: "tenements_wall_connector03"
-  gridPoint {
-    x: 50
-    y: 0
-    z: -7.9
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53dec08236626250170008a7"
   }
   lod: 0
 }
@@ -1697,19 +1685,6 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "53dec0823662625017000909"
-  }
-  lod: 0
-}
-props {
-  name: "tenements_clutter_piecesOfTrash05"
-  gridPoint {
-    x: 56.9
-    y: 0
-    z: -16.7
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53dec082366262501700090b"
   }
   lod: 0
 }
@@ -12317,7 +12292,7 @@ props {
   gridPoint {
     x: 50
     y: 0
-    z: -5
+    z: -3
   }
   orientation: ORIENTATION_S
   idRef {
@@ -12330,7 +12305,7 @@ props {
   gridPoint {
     x: 50
     y: 0
-    z: -4
+    z: -5
   }
   orientation: ORIENTATION_S
   idRef {
@@ -12343,7 +12318,7 @@ props {
   gridPoint {
     x: 50
     y: 0
-    z: -3
+    z: -4
   }
   orientation: ORIENTATION_S
   idRef {

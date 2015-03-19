@@ -859,7 +859,7 @@ props {
   gridPoint {
     x: -15
     y: 0
-    z: 10
+    z: 4
   }
   orientation: ORIENTATION_E
   idRef {
@@ -889,7 +889,7 @@ props {
   gridPoint {
     x: -15
     y: 0
-    z: 7
+    z: 1
   }
   orientation: ORIENTATION_E
   idRef {
@@ -902,7 +902,7 @@ props {
   gridPoint {
     x: -15
     y: 0
-    z: 6
+    z: 0
   }
   orientation: ORIENTATION_E
   idRef {
@@ -915,7 +915,7 @@ props {
   gridPoint {
     x: -15
     y: 0
-    z: 3
+    z: -3
   }
   orientation: ORIENTATION_E
   idRef {
