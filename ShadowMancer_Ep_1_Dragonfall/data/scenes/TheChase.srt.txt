@@ -110,7 +110,7 @@ triggers {
       functionName: "End Current Team Round"
     }
     ops {
-      functionName: "Order Actor to Move To (Region)"
+      functionName: "Order Actor to Hunt And Destroy (Team)"
       args {
         call_value {
           functionName: "Specific Actor"
@@ -128,20 +128,20 @@ triggers {
       }
       args {
         call_value {
-          functionName: "Get Map Item (Region)"
+          functionName: "Get Preset Value (string)"
           args {
-            string_value: "547593916563627814004538"
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
           }
         }
       }
       args {
         call_value {
-          functionName: "Get Preset Value (int)"
+          functionName: "Get Map Item (SceneDimension)"
           args {
-            string_value: "FacingDirection"
-          }
-          args {
-            int_value: 0
+            string_value: "Default"
           }
         }
       }
@@ -179,77 +179,8 @@ triggers {
         }
       }
     }
-  }
-  isActive: true
-  idRef {
-    id: "547594c96563627814004539"
-  }
-  elseActions {
-  }
-  is_oneshot: true
-}
-triggers {
-  name: "trgr_OrderAttack"
-  events {
     ops {
-      functionName: "On Region Enter"
-      args {
-        call_value {
-          functionName: "Get Map Item (Region)"
-          args {
-            string_value: "547593916563627814004538"
-          }
-        }
-      }
-    }
-  }
-  conditions {
-    ops {
-      functionName: "Comparison (Actor)"
-      args {
-        call_value {
-          functionName: "Triggering Actor"
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "IsOrIsNot"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor)"
-          args {
-            string_value: "54758dae6563627814004535"
-          }
-        }
-      }
-    }
-  }
-  actions {
-    ops {
-      functionName: "Order Actor to Seek And Destroy (Team)"
-      args {
-        call_value {
-          functionName: "Specific Actor"
-          args {
-            call_value {
-              functionName: "Get Map Item (Actor)"
-              args {
-                string_value: "54758dae6563627814004535"
-              }
-            }
-          }
-          args {
-          }
-        }
-      }
+      functionName: "Interrupt Team\'s Movement"
       args {
         call_value {
           functionName: "Get Preset Value (string)"
@@ -269,11 +200,22 @@ triggers {
           }
         }
       }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
     }
   }
   isActive: true
   idRef {
-    id: "54759818656362781400453a"
+    id: "547594c96563627814004539"
   }
   elseActions {
   }

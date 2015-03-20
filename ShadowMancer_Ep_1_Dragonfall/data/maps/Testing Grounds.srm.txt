@@ -779,9 +779,9 @@ props {
 props {
   name: "vfx_fx_matrixentranceexit"
   gridPoint {
-    x: -3
+    x: -8
     y: 0
-    z: -35
+    z: 7
   }
   orientation: ORIENTATION_S
   properties {
@@ -839,6 +839,18 @@ props {
     z: -2
   }
   orientation: ORIENTATION_S
+  idRef {
+    id: "550b7885656362ec1d00074f"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    jackPoint {
+      LANIdentifier: "53bee0da366262c0170012f4"
+      LANEquipment: ""
+    }
+    interaction_info_text: ""
+  }
   lod: 0
 }
 props {
@@ -870,9 +882,9 @@ props {
 props {
   name: "vfx_fx_matrixDoor2"
   gridPoint {
-    x: -15
+    x: -13
     y: 0
-    z: 4
+    z: 5
   }
   orientation: ORIENTATION_S
   properties {

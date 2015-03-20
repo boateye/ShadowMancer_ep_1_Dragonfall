@@ -556,7 +556,7 @@ triggers {
             string_value: "WithOrWithout"
           }
           args {
-            int_value: 1
+            int_value: 0
           }
         }
       }
@@ -587,7 +587,7 @@ triggers {
       }
     }
     ops {
-      functionName: "Order Actor to Set Priority Target"
+      functionName: "Order Actor to Hunt And Destroy (Team)"
       args {
         call_value {
           functionName: "Specific Actor"
@@ -605,9 +605,20 @@ triggers {
       }
       args {
         call_value {
-          functionName: "Get Map Item (Player)"
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
           args {
             int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
           }
         }
       }
@@ -677,7 +688,7 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "trgr_ContinuePursuit"
+  name: "trgr_Replay Alarm"
   events {
     ops {
       functionName: "On Region Enter"
@@ -722,67 +733,29 @@ triggers {
   }
   actions {
     ops {
-      functionName: "End Current Team Round"
-    }
-    ops {
-      functionName: "Order Actor to Move To (Region)"
+      functionName: "Play Sound"
       args {
         call_value {
-          functionName: "Specific Actor"
+          functionName: "Get Map Item (Sound)"
           args {
-            call_value {
-              functionName: "Get Map Item (Actor)"
-              args {
-                string_value: "547a7428326162a8180054f1"
-              }
-            }
+            string_value: "props"
           }
           args {
+            string_value: "Alarm1"
           }
         }
       }
       args {
-        call_value {
-          functionName: "Get Map Item (Region)"
-          args {
-            string_value: "547fe902656362f8200058ae"
-          }
-        }
+        float_value: 8
       }
       args {
         call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "FacingDirection"
+            string_value: "bool"
           }
           args {
-            int_value: 3
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Order Actor to Set Priority Target"
-      args {
-        call_value {
-          functionName: "Specific Actor"
-          args {
-            call_value {
-              functionName: "Get Map Item (Actor)"
-              args {
-                string_value: "547a7428326162a8180054f1"
-              }
-            }
-          }
-          args {
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (Player)"
-          args {
-            int_value: 0
+            int_value: 1
           }
         }
       }
@@ -1121,9 +1094,9 @@ regions {
   name: "rgn_Office Corner"
   position {
     x: -60
-    y: 49
-    width: 8
-    height: 1
+    y: 46
+    width: 11
+    height: 4
   }
   enabledAtStart: true
   is_camera_region: false
@@ -2676,6 +2649,7 @@ characters {
     char_name: "Molly"
     enabled_at_start: false
     pc_spawn_number: -1
+    unkillable: true
     hiring_type: HiringType_Forced
     portrait {
       filename: "pc_humanfemale_07c_darkskin"
@@ -2747,6 +2721,8 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
+}
+character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

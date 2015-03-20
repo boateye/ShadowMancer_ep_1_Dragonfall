@@ -5,3 +5,15 @@ equipment {
 equipment {
   prefab_name: "CyberdeckExcalibur"
 }
+equipment {
+  prefab_name: "PR NPC Decker Blaster 3"
+}
+equipment {
+  prefab_name: "PR NPC Decker Killer 3"
+}
+equipment {
+  prefab_name: "PR NPC Decker Medic 3"
+}
+equipment {
+  prefab_name: "Matrix Basic Attack (Ranged Black IC Lv 2)"
+}

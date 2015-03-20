@@ -137,6 +137,55 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "trgr_SpawnJake"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "550b78ea656362ec1d000751"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "550a3fcb656362100d001d9c"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "550b78ba656362ec1d000750"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "rgn_MakeHostile"
   position {
@@ -183,12 +232,58 @@ regions {
   loop_default_music: false
   no_fow_in_region: false
 }
+regions {
+  name: "rgn_SpawnJake"
+  position {
+    x: -9
+    y: 6
+    width: 4
+    height: 4
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "550b78ea656362ec1d000751"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -6
+    x: -9
     y: 0
-    z: 0
+    z: -2
   }
   orientation: ORIENTATION_S
   idRef {
@@ -203,12 +298,14 @@ characters {
     char_name: "New Actor"
     enabled_at_start: true
     pc_spawn_number: 0
+    spawn_type: SpawnType_Normal
+    dimension_name: "Default"
   }
 }
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -7
+    x: -5
     y: 0
     z: 1
   }
@@ -289,7 +386,7 @@ characters {
     }
     team_id: "Shadowrunners"
     char_name: "Jake Armitage"
-    enabled_at_start: true
+    enabled_at_start: false
     pc_spawn_number: -1
     unkillable: true
     spawn_type: SpawnType_Matrix
@@ -299,7 +396,7 @@ characters {
       filename: "NPC_HumanMale_JakeArmitage"
     }
     description_bio: "Bad memory, poor sleep habits. Knows the game like no one else."
-    dimension_name: "Matrix"
+    dimension_name: "Default"
     karma: 82
     hiring_cost_override: 10
     hiring_tag: "Jake Armitage during Screaming Fist"

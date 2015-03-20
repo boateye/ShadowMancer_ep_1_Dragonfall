@@ -1655,7 +1655,7 @@ mapName: "TheChat"
 parentStory: ""
 scene_title: "The Chat"
 scene_subtitle: ""
-scene_synopsis: "The Sky above the port was the color of television, tuned to a dead channel. \n\nThe Chatsubo was a bar for professional expatriates; you could drink there for a week, and never hear two words in Japanese.  You\'re here to speak english with Ratz, the owner of this fine establishment of a dive bar. The warm familiarity of the chat welcomes you as you stride in off  of the the cold port."
+scene_synopsis: "The Sky above the port was the color of television, tuned to a dead channel. \n\nThe Chatsubo is a bar for professional expatriates; you could drink there for a week, and never hear two words in Japanese.  \n\nYou\'re here to speak english with Ratz, the owner of this fine establishment of a dive bar. The warm familiarity of the chat welcomes you as you stride in off  of the the cold port."
 scene_image: "loadingimage_haven"
 scene_continue_button_skip: false
 scene_restore_runner_health: false

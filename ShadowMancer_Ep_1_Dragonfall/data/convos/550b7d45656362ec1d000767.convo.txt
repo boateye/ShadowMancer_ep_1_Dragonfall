@@ -1,0 +1,19 @@
+idRef {
+  id: "550b7d45656362ec1d000767"
+}
+ui_name: "TheScreamingFist_TheyAreImmune"
+nodes {
+  idRef {
+    id: "550b7d64656362ec1d00076d"
+  }
+  index: 0
+  text: "Case, our attacks don\'t seem to be very effective against this level of ICE. We should leave!"
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

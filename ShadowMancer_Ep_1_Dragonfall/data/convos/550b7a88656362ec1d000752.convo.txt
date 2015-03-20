@@ -1,0 +1,24 @@
+idRef {
+  id: "550b7a88656362ec1d000752"
+}
+ui_name: "TheScreamingFist_JakeArmitage"
+nodes {
+  idRef {
+    id: "550b7a9e656362ec1d000758"
+  }
+  index: 0
+  text: "You go on ahead of me Case. I need to be the last one out. I\'ll be sure to hold them off for you. I think only the ICE in this node have been beefed up, so you should be fine."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "No Effect"
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

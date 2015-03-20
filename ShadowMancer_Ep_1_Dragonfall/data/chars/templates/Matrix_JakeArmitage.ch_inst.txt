@@ -1,6 +1,6 @@
 prefab_name: "Seattle:Story/JakeArmitage"
 character_sheet_id: "IC_Lv5_Black_Ranged"
-equipment_sheet_id: "NPC Decker Lv5 Gear"
+equipment_sheet_id: "Case_Default_Equipment"
 character_mod {
   stats {
     body: 0

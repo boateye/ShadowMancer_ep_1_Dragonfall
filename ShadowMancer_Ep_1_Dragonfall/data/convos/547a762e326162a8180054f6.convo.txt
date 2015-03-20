@@ -198,7 +198,7 @@ nodes {
       }
     }
     ops {
-      functionName: "Order Actor to Seek And Destroy (Team)"
+      functionName: "Order Actor to Hunt And Destroy (Team)"
       args {
         call_value {
           functionName: "Specific Actor"
@@ -255,6 +255,9 @@ nodes {
           }
         }
       }
+    }
+    ops {
+      functionName: "End Current Team Round"
     }
   }
 }
