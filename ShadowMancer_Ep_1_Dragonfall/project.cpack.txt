@@ -1,6 +1,6 @@
 project_id: "54fe753e656362d410004db8"
 project_name: "ShadowMancer_Ep_1_Dragonfall"
-project_version: "1"
+project_version: "1.1"
 author_name: "boateye"
 synopsis: "Project: Shadowmancer Ep.1 - The Screaming Fist v1"
 has_story: true
