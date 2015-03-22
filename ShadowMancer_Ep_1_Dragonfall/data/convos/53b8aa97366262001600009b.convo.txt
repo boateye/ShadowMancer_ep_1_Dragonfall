@@ -7,7 +7,7 @@ nodes {
     id: "53b8aab736626200160000a9"
   }
   index: 0
-  text: "{{GM}}The metahuman tending the bar is Ratz. His prostetic arm jerks monotonously as he fills a tray of glasses with Kirin. He notices you and smiles, revealing a webwork of teeth and decay.{{/GM}}\n\nGutentag Her Case. Wage was in here earlier, with two joeboys. Maybe some business with you?\n\n{{GM}}The scantily clad woman next to you giggles, and nudges you. Ratz\'s smile widenes.{{/GM}}\n\n\n\n"
+  text: "{{GM}}The metahuman tending the bar is Ratz. His prostetic arm jerks monotonously as he fills a tray of glasses with Kirin. He notices you and smiles, revealing a webwork of teeth and decay.{{/GM}}\n\nGuten tag Herr Case. Wage was in here earlier, with two joeboys. Maybe some business with you?\n\n{{GM}}The scantily clad woman next to you giggles, and nudges you. Ratz\'s smile widenes.{{/GM}}\n\n\n\n"
   branches {
     responseText: ""
     nextNodeIndex: 1
@@ -73,55 +73,6 @@ nodes {
   }
   branches {
     responseText: "{{CC}}Snarky{{/CC}} Laugh it up, fuzz-ball."
-    conditions {
-      ops {
-        functionName: "Compare Actor Skill"
-        args {
-          call_value {
-            functionName: "Get Map Item (Player)"
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "BaseOrCurrent"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "ActorSkills"
-            }
-            args {
-              int_value: 18
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "Comparison Ops"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          int_value: 1
-        }
-      }
-    }
     nextNodeIndex: 3
     auxiliaryLink: true
   }
@@ -174,6 +125,19 @@ nodes {
           }
           args {
             int_value: 3
+          }
+        }
+      }
+      args {
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
           }
         }
       }
@@ -313,6 +277,19 @@ nodes {
             }
             args {
               int_value: 3
+            }
+          }
+        }
+        args {
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
             }
           }
         }
@@ -476,6 +453,19 @@ nodes {
             }
             args {
               int_value: 3
+            }
+          }
+        }
+        args {
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
             }
           }
         }

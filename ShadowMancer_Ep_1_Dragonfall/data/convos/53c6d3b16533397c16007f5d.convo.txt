@@ -141,7 +141,7 @@ nodes {
     id: "53c6e71b6533397c160081c6"
   }
   index: 9
-  text: "No kidding. Der schiss gets\'s expensive real fast. \n\n{{GM}}Ratz\'s arm whines in agreement{{/GM}}"
+  text: "No kidding. That Scheisse gets expensive real fast. \n\n{{GM}}Ratz\'s arm whines in agreement{{/GM}}"
   branches {
     responseText: "Now I have to sleep in the cheapest of coffins. The kind where you can\'t even see the lights of tokyo because of the glare of the television sky."
     nextNodeIndex: 10
